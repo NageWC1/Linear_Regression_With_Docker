@@ -7,3 +7,5 @@
 2. Also we have to create the Requirement.txt file to hold the library that needed by the project 
     then we can use command: pip install -r requirements.txt , install the package that we mentioned there 
     to the same environment 
+
+3. we can use the gitignore to what are the file that we dont need to push into the repository 
