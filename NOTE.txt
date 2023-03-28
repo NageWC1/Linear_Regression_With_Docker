@@ -1,0 +1,9 @@
+1. For every project we want to create a conda environment for best practice 
+    to create the environment we can use this command : conda create environment_name python==3.7 -y
+    Here we giving y because after download tehat will automatically install the environment 
+
+    QUESTION: find out how the environment downloaded in current folder
+
+2. Also we have to create the Requirement.txt file to hold the library that needed by the project 
+    then we can use command: pip install -r requirements.txt , install the package that we mentioned there 
+    to the same environment 
