@@ -9,3 +9,6 @@
     to the same environment 
 
 3. we can use the gitignore to what are the file that we dont need to push into the repository 
+
+Erro_NOTE*
+        The jupytenote file got not able to run in the VSCODE, have to look at why 
