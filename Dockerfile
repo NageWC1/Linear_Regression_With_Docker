@@ -15,7 +15,7 @@ COPY . /app
 WORKDIR /app
     # we mentioning what are the dependencies we have to install, in this we will mention that requirement.txt will have all the dependencies 
     # we can set that as to run and install the all the packages to our project 
-RUN pip install -r requirement.txt 
+RUN pip install -r requirements.txt 
     # when the docker image run as the conainer, in oreder to access the application inside the container we have to expose some port 
     # then only we will be able to accesss the entier url, because that portal we will be able to access that apllication 
     #  so we here going to expose a port within that particular docker container and that port we mentioning here 
