@@ -31,3 +31,17 @@ Erro_NOTE*
 
             And when we deploy this into heroku that will understand the filse and install the needed this on 
             the instance 
+
+6. CICD piepline: this means when the commits happen to git deployment will auomatically happen so as possible 
+
+7. Docarize the project and run it as docarize container, dockers bassically saves lot of time wit respect to 
+    configuration setups and all (becasue entier cinfiguration is basically made within a docker image and that
+    can be run as container anywhere: with any operating system or something cloud server where ever you want you 
+    can basically do it)
+
+
+Important NOTE*  : why we careting docker image and container
+
+    lets take we building project with various configuration, dipendency and also our environment that we used to create the project
+    then we running it successfully, but when the project this project wanted to be run in differnt machine the conffiguration and the set 
+    should be done manually, this will be painfull process so the docker is prevent from that and save the time for us  

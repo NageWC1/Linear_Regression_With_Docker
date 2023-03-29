@@ -1,0 +1,63 @@
+# this wil have the enier process, as soon as we commit all things we need to do 
+# is 1st we nede to build the docker file basically means the entire image needs to be build 
+#  then we need to push this image in form of a container to the heroku platform 
+
+# so the entire configuration over here will be setup in this main.yaml file 
+
+# your workflow name
+name: Deploy to heroku 
+
+# Run workflow on every push to main branch.
+on:
+  push:
+    branches: [main]
+  
+# Your workflows jobs.
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      #Check-out your repository.
+        - name: Checkout
+          uses: actions/checkout@v2
+
+### IMOPORTANT PART ####
+
+        - name: Build, Push and Release a Docker contianer to Heroku. # Our custome name
+          uses: gonuit/heroku-docker@v1.3.3 # Github action name (leave it as it is)
+          with:
+            # Below you must provide variables for your heroku app.
+
+            # The email address associated with your heroku account
+            # If you don't want to use repository secrets(whic is recommended) you can do:
+            # email: my.email#example.com
+            email: ${{secrets.HEROKU_EMAIL}}
+
+            # Heroku API key associated with provided user's email 
+            # API key is available under your Heroku account settings.
+            heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+
+            # Name of the heroku application to which the build is to be sent 
+            heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
+
+            # (Optional, default: "./")
+            # Dockerfile directory.
+            # for example, if you have a Dockerfile in the root of you project
+            dockerfile_directory: ./
+
+            # (Optional, default: "Dockerfile")
+            # Dockerfile name.
+            dockerfile_name: Dockerfile 
+                      # (Optional, default: "")
+            # Additional options of docker build command.
+            docker_options: "--no-cache"
+
+            # (Optional, default: "web")
+            # Select the process type for which you want the docker container to be uploaded.
+            # By default, this argument is set to "web".
+            # For more information look at https://devcenter.heroku.com/articles/process-model
+            process_type: web
+          
+   
+          
+### ⬆ IMPORTANT PART ⬆ ###
