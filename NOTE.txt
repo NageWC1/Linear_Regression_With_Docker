@@ -12,3 +12,11 @@
 
 Erro_NOTE*
         The jupytenote file got not able to run in the VSCODE, have to look at why 
+
+4. The flask application is to create api to handle the model that we created, there 
+    (For the appplication the default page was displayed for initial page)
+            i. importing the model 
+            ii. then we creating  an api that accepting the post request (so we have to send a data to this api to test)
+            iii. inside we transform/scalling the data with the file pikcle the scaller from the sklearn
+            iv. then i scalled the data and pass to the predict method that called by the pickled model
+            v. the result  is jsonized and return from the api 
