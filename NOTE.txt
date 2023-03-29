@@ -20,3 +20,14 @@ Erro_NOTE*
             iii. inside we transform/scalling the data with the file pikcle the scaller from the sklearn
             iv. then i scalled the data and pass to the predict method that called by the pickled model
             v. the result  is jsonized and return from the api 
+
+5. Now the step is to deploy the app into heroku plateform, for this we 
+            i. procfile is a file to specif some commands that needed to execute by the application so as 
+                it is start 
+
+            gunicorn: the allows entier python application in amazing way, it create multiple python processors 
+            based on the number of requests client is putting and it distribute the enire through multiple instance 
+
+
+            And when we deploy this into heroku that will understand the filse and install the needed this on 
+            the instance 
