@@ -24,4 +24,4 @@ EXPOSE $PORT
     # and what is the application instance name inside the file we created (flask file that holding the application api implementations)
     # what is the binding is acually doing is very very important, because this is the localhost ip address that going to
     # assign in the cloud platform so we have to make sure our port to bind to that address in order to access the applicatiom
-CMD gunicorn --wokers=4 --bind 0.0.0.0:$PORT app:app
+CMD gunicorn --workers=4 --bind 0.0.0.0:$PORT app:app
